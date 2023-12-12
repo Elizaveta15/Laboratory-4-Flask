@@ -17,6 +17,7 @@ app = Flask(__name__)
 
 app.logger.addHandler(file_handler)
 app.logger.setLevel(DEBUG)
+app.logger.propagate = False
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
@@ -70,8 +71,7 @@ def record_all():
     return render_template("records.html", list_free=record_free, list_busy=record_busy)
 
 
-def test_job():
-    print('I am working...')
+def job():
     records = (session.query(Record.slot, Doctor.name.label('doc_name'), Doctor.spec, User.name)
                .select_from(Record, Doctor, User)
                .join(Doctor, Doctor.id == Record.doctor_id)
@@ -81,9 +81,7 @@ def test_job():
     for record in records:
         # current date and time
         now: datetime = datetime.now().replace(microsecond=0, second=0)
-        # cur: datetime = record.slot.replace(year=now.year, month=now.month, day=now.day + 1, hour=now.hour, minute=now.minute)
-        if record.slot - now == timedelta(days=1):
-            print("hero")
+        if record.slot - now == timedelta(days=1, hours=0, minutes=0):
             app.logger.info(f"Здравствуйте, {record.name}! Напоминаем, Вы записаны завтра в {record.slot }!")
         if record.slot - now == timedelta(hours=2):
             app.logger.info(f"Здравствуйте, {record.name}! Вам через 2 часа на прием!")
@@ -93,5 +91,5 @@ if __name__ == "__main__":
     scheduler = APScheduler()
     scheduler.init_app(app)
     scheduler.start()
-    scheduler.add_job(id='test-job', func=test_job, trigger='interval', seconds=10)
+    scheduler.add_job(id='test-job', func=job, trigger='interval', seconds=60)
     app.run(debug=False)
