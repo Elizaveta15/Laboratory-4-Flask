@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    line-height: 2;
+}
+
+BODY {
+    font-family: Inter, sans-serif;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    background: linear-gradient(to bottom right, rgba(47, 181, 177, 0.9), rgba(19, 2, 117, 0.9)) lightgray 50% no-repeat fixed;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+ADDRESS {
+    text-align: right;
+    margin: 10px;
+}
+
+MENU {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.2);
+    list-style: none;
+}
+
+.Link {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+MAIN {
+    width: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+SECTION {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: calc(100% - 5px);
+    padding: 15px 0 0 15px;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+FORM {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+FIELDSET {
+    float: left;
+}
+
+LEGEND {
+    float: none;
+    width: auto;
+}
+
+.Field {
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+LABEL {
+    float: left;
+    padding-right: 10px;
+}
+
+INPUT, SELECT {
+    width: 200px;
+    height: 30px;
+}
+
+.Button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Button {
+    padding: 5px;
+    margin: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    background: #FFF;
+    color: rgba(19, 2, 117);
+    width: 120px;
+    height: 75%;
+}
+
+TABLE {
+    border: 3px solid rgba(19, 2, 117);
+    border-collapse: collapse;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.20);
+ }
+
+ TH {
+    border: 2px solid rgba(19, 2, 117);
+ }
+
+ TD {
+    border: 1px solid rgba(19, 2, 117);
+ }
+
+FOOTER {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+FORM {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+FIELDSET {
+    float: left;
+}
+
+LEGEND {
+    float: none;
+    width: auto;
+}
+
+.Field {
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+
+LABEL {
+    float: left;
+    padding-right: 10px;
+}
+
+INPUT, SELECT {
+    width: 220px;
+    height: 25px;
+}
+
+SECTION {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: calc(100% - 5px);
+    padding: 15px 0 0 15px;
+    justify-content: start;
+    flex-wrap: nowrap;
+}

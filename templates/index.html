@@ -1,0 +1,30 @@
+{%  extends 'base.html'%}
+
+{% block main %}
+<H1>{{mes}}</H1>
+<H1>Форма записи на прием</H1>
+<SECTION>
+    <FORM method="post">
+        <FIELDSET>
+            <DIV class="Field">
+                <LABEL for="user_name">ФИО пациента</LABEL>
+                <INPUT autofocus required type="text" name="user_name" id="user_name">
+            </DIV>
+            <DIV class="Field">
+                <LABEL for="doctor_name">ФИО доктора</LABEL>
+                <INPUT required type="text" name="doctor_name" id="doctor_name">
+            </DIV>
+            <DIV class="Field">
+                <LABEL for="datetime">Дата и время</LABEL>
+                <INPUT required type="datetime-local" name="datetime" id="datetime" 
+                min="2023-12-01T08:30" max="2023-12-31T18:30">
+            </DIV>
+            
+        </FIELDSET>
+        <DIV class="Button-container">
+            <INPUT class="Button" type="submit" value="Отправить">
+            <INPUT class="Button" type="reset" value="Сбросить">
+        </DIV>
+    </FORM>
+</SECTION>
+{% endblock %}

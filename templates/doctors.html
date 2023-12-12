@@ -1,0 +1,21 @@
+{%  extends 'base.html'%}
+
+{% block main %}
+<h1>Все доктора</h1>
+<SECTION>
+    <TABLE>
+        <TR>
+            <TH>Фамилия и имя</TH>
+            <TH>Телефон</TH>
+            <TH>Специализация</TH>
+        </TR>
+        {% for el in list %}
+            <TR>
+                <TD>{{ el.name }}</TD>
+                <TD>{{ el.phone }}</TD>
+                <TD>{{ el.spec }}</TD>
+            </TR>
+        {% endfor %}
+    </TABLE>
+</SECTION>
+{% endblock %}

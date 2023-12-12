@@ -1,0 +1,41 @@
+{%  extends 'base.html'%}
+
+{% block main %}
+<h1>Доступные записи</h1>
+<SECTION>
+    <TABLE>
+        <TR>
+            <TH>Фамилия и имя врача</TH>
+            <TH>Специализация</TH>
+            <TH>Доступная дата и время</TH>
+        </TR>
+        {% for el in list_free %}
+            <TR>
+                <TD>{{ el.name }}</TD>
+                <TD>{{ el.spec }}</TD>
+                <TD>{{ el.slot }}</TD>
+            </TR>
+        {% endfor %}
+    </TABLE>
+</SECTION>
+
+<h1>Занятые записи</h1>
+<SECTION>
+    <TABLE>
+        <TR>
+            <TH>Фамилия и имя врача</TH>
+            <TH>Специализация</TH>
+            <TH>Дата и время</TH>
+            <TH>Фамилия и имя пациента</TH>
+        </TR>
+        {% for el in list_busy %}
+            <TR>
+                <TD>{{ el.doc_name }}</TD>
+                <TD>{{ el.spec }}</TD>
+                <TD>{{ el.slot }}</TD>
+                <TD>{{ el.name }}</TD>
+            </TR>
+        {% endfor %}
+    </TABLE>
+</SECTION>
+{% endblock %}

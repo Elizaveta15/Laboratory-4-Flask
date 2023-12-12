@@ -1,0 +1,11 @@
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install flask
+
+pip install flask-sqlalchemy
+
+pip install psycopg2
+
+pip install Flask-APScheduler
