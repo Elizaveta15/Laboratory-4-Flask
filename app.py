@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_apscheduler import APScheduler
 
-from logging import  FileHandler, INFO, DEBUG
+from logging import  FileHandler, DEBUG
 
 from bd import session
 from Entity.User import User
