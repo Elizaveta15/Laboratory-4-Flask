@@ -1,7 +1,7 @@
 # Ответы:
 1. Виды баз данных (расширенный список):  
- - Реляционные (PostgreSQL, MySQL и SQLite, Oracle, Microsoft SQL Server)  
- - Ключ-значение (Redis и Memcached)  
+- Реляционные (PostgreSQL, MySQL и SQLite, Oracle, Microsoft SQL Server)  
+- Ключ-значение (Redis и Memcached)  
  - Документо-ориентированные (MongoDB)  
  - Базы данных временных рядов (Prometheus, InflubDB, Graphite)  
  - Графовые базы данных (Neo4J)  
